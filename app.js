@@ -4,7 +4,6 @@ const cors = require("cors");
 const { google } = require("googleapis");
 
 const app = express();
-const PORT = 8080;
 app.use(cors());
 
 app.use(express.json());
@@ -36,5 +35,5 @@ app.get("/", async (req, res) => {
 });
 
 app.listen(process.env.PORT || 5000, (req, res) => {
-  console.log("hey " + PORT);
+  console.log("hey " + process.env.PORT || 5000);
 });
