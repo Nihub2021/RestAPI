@@ -14,6 +14,8 @@ app.get("/", async (req, res) => {
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
+  try{
+
   const client = await auth.getClient();
 
   const googleSheets = google.sheets({ version: "v4", auth: client });
@@ -32,6 +34,10 @@ app.get("/", async (req, res) => {
   });
 
   res.send(getRows.data);
+} catch(err){
+  console.log("err", err);
+}
+
 });
 
 app.listen(process.env.PORT || 5000, (req, res) => {
