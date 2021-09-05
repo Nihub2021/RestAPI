@@ -35,6 +35,6 @@ app.get("/", async (req, res) => {
   res.send(getRows.data);
 });
 
-app.listen(PORT, (req, res) => {
+app.listen(process.env.PORT || 5000, (req, res) => {
   console.log("hey " + PORT);
 });
