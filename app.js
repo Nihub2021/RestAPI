@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.get("/one", async (req, res) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "secrets.json",
+    keyFile: "access.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
@@ -31,7 +31,7 @@ app.get("/one", async (req, res) => {
 });
 app.get("/two", async (req, res) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "secrets.json",
+    keyFile: "access.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
@@ -52,7 +52,7 @@ app.get("/two", async (req, res) => {
 });
 app.get("/three", async (req, res) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "secrets.json",
+    keyFile: "access.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
@@ -73,7 +73,7 @@ app.get("/three", async (req, res) => {
 });
 app.get("/four", async (req, res) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "secrets.json",
+    keyFile: "access.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
